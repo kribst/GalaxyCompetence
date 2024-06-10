@@ -1,0 +1,82 @@
+{% extends 'competence/main.html' %}
+{% load static %}
+
+
+ {% block content %}
+
+<!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Develloper Vos Compétances</h1>
+
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+<!-- bare d'informatiom -->
+<div class="container-fluid bg-secondary py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 wow fadeIn" data-wow-delay=".1s">
+                <div class="d-flex counter">
+                    <h1 class="me-3 text-primary counter-value">1</h1>
+                    <h5 class="text-white mt-1">Boostez votre productivité</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 wow fadeIn" data-wow-delay=".3s">
+                <div class="d-flex counter">
+                    <h1 class="me-3 text-primary counter-value">2</h1>
+                    <h5 class="text-white mt-1">Des formation d'experts</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 wow fadeIn" data-wow-delay=".5s">
+                <div class="d-flex counter">
+                    <h1 class="me-3 text-primary counter-value">3</h1>
+                    <h5 class="text-white mt-1">Renforcez votre confiance</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 wow fadeIn" data-wow-delay=".7s">
+                <div class="d-flex counter">
+                    <h1 class="me-3 text-primary counter-value">4</h1>
+                    <h5 class="text-white mt-1">Des possibilités infinies</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--fin bare d'informatiom -->
+
+
+    <!-- produits -->
+    <div class="container-fluid project py-5 mb-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                <h5 class="text-primary">Nos Formations</h5>
+                <h1>Renforcer Vos Compétences</h1>
+            </div>
+            <div class="row g-5">
+                {% for service in formation %}
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="{{ service.image }}" class="img-fluid w-100 rounded" alt="">
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary">{{ service.titre }}</h4>
+                                    <p class="m-0 text-white">{{ service.sous_titre }}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- fin produits -->
+
+{% endblock %}
+
+
+
+    
