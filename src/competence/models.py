@@ -27,7 +27,7 @@ class Commentaire(models.Model):
     nom = models.CharField(max_length=100, verbose_name='Nom')
     profession = models.CharField(max_length=50, verbose_name='Profession')
     message = models.TextField(max_length=500)
-    image = models.CharField(max_length=5000)
+    image = models.ImageField(upload_to='image/', null=True, blank=True)
     publie = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now=True)
 
