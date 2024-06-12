@@ -12,7 +12,7 @@ class Formation(models.Model):
     titre = models.CharField(max_length=50, unique=True)
     sous_titre = models.CharField(max_length=50, unique=True)
     description = models.TextField()
-    image = models.ImageField(upload_to='image/', null=True, blank=True)
+    image = models.CharField(max_length=5000)
     created_at = models.DateTimeField(auto_now=True)
 
 
